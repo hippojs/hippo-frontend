@@ -13,7 +13,8 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test"
+    "test": "./scripts/prettier-precommit.sh && ember test",
+    "prettier": "prettier --write '{package.json,{app,tests}/**/*.{js,json}}'"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -36,7 +37,9 @@
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.16.0",
     "ember-welcome-page": "^3.0.0",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.8.2"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
