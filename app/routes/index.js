@@ -2,10 +2,17 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model() {
-    return [
-      { src: 'http://vjs.zencdn.net/v/oceans.mp4', type: 'video/mp4' },
-      { src: 'http://vjs.zencdn.net/v/oceans.webm', type: 'video/webm' },
-      { src: 'http://vjs.zencdn.net/v/oceans.ogv', type: 'video/ogg' },
-    ];
+    // this.store
+    //   .createRecord('video', {
+    //     title: 'bar',
+    //     description: 'foo',
+    //     source: 'http://vjs.zencdn.net/v/oceans.mp4',
+    //   })
+    //   .save()
+    //   .then(() => {
+    //     console.log('save success!');
+    //   });
+
+    return this.store.findAll('video');
   },
 });
