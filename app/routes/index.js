@@ -15,4 +15,11 @@ export default Route.extend({
 
     return this.store.findAll('video');
   },
+
+  actions: {
+    // TODO: after user component finished, remove this from route action
+    signOut() {
+      this.get('session').close();
+    },
+  },
 });

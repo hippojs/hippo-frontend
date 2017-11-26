@@ -2,4 +2,11 @@
 
 <h1>Hello Hippo!</h1>
 
+{{!-- TODO: after user component finished, remove this from route action --}}
+{{#if session.isAuthenticated}}
+  Logged in as {{session.currentUser.displayName}}
+  <button {{action "signOut"}}>Sign out</button>
+  {{outlet}}
+{{/if}}
+
 {{video-player sources=model}}

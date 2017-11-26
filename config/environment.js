@@ -33,6 +33,9 @@ module.exports = function(environment) {
       storageBucket: process.env.STORAGE_BUCKET,
       messagingSenderId: process.env.MESSAGING_SENDER_ID,
     },
+    torii: {
+      sessionServiceName: 'session',
+    },
   };
 
   if (environment === 'development') {
